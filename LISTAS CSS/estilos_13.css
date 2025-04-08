@@ -1,0 +1,25 @@
+.lista-marcador {
+    list-style-type: none;
+    padding: 0;
+}
+.lista-marcador li {
+    position: relative;
+    padding: 8px 0 8px 25px;
+    margin-bottom: 5px;
+}
+.lista-marcador li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    background-color: #4CAF50;
+    clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+    transition: all 0.3s;
+}
+.lista-marcador li:hover::before {
+    background-color: #FF5722;
+    transform: translateY(-50%) rotate(90deg);
+}

@@ -1,0 +1,21 @@
+.lista-escalera {
+    list-style-type: none;
+    padding: 0;
+}
+.lista-escalera li {
+    padding: 10px 15px;
+    margin-left: 0;
+    margin-bottom: 5px;
+    background-color: #f0f0f0;
+    transition: all 0.3s;
+    position: relative;
+}
+.lista-escalera li:nth-child(1) { margin-left: 0; }
+.lista-escalera li:nth-child(2) { margin-left: 20px; }
+.lista-escalera li:nth-child(3) { margin-left: 40px; }
+.lista-escalera li:nth-child(4) { margin-left: 60px; }
+
+.lista-escalera li:hover {
+    background-color: #2196F3;
+    color: white;
+}

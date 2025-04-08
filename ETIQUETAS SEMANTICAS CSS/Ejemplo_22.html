@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 22 - Modal CSS</title>
+    <link rel="stylesheet" href="estilos_22.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Modal con CSS Puro</h1>
+        <p>Este ejemplo muestra cómo crear un modal funcional utilizando solo HTML y CSS, sin necesidad de JavaScript. El modal se activa mediante la pseudo-clase :checked de un input checkbox.</p>
+       
+        <label for="modal-toggle" class="btn">Abrir Modal</label>
+       
+        <input type="checkbox" id="modal-toggle" class="modal-toggle">
+       
+        <div class="modal">
+            <div class="modal-content">
+                <label for="modal-toggle" class="modal-close">✕</label>
+                <h2>¡Este es un modal!</h2>
+                <p>Puedes crear modales completamente funcionales utilizando solo CSS. Esto se logra mediante el uso del selector :checked para alternar la visibilidad del modal.</p>
+                <p>El modal incluye una animación suave al aparecer y desaparecer, y se cierra haciendo clic en el botón de cierre o en cualquier parte fuera del contenido del modal.</p>
+                <label for="modal-toggle" class="btn">Cerrar</label>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,16 @@
+.lista-degradado {     list-style-type: none;
+    padding: 0;
+    width: 250px;
+}
+.lista-degradado li {
+    padding: 12px 15px;
+    margin-bottom: 5px;
+    color: white;
+    background: linear-gradient(to right, #FF5722, #FF9800);
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.lista-degradado li:nth-child(2n) {
+    background: linear-gradient(to right, #2196F3, #00BCD4);
+}
+

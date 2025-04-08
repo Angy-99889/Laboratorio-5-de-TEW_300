@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10 - Acordeón semántico</title>
+    <link rel="stylesheet" href="estilos_10.css">
+
+</head>
+<body>
+    <h1>Preguntas Frecuentes</h1>
+   
+    <section class="acordeon">
+        <details>
+            <summary>¿Qué es HTML5?</summary>
+            <div class="acordeon-contenido">
+                <p>HTML5 es la quinta revisión importante del lenguaje básico de la World Wide Web, HTML. HTML5 especifica dos variantes de sintaxis para HTML: un «clásico» HTML (text/html), la variante conocida como HTML5 y una variante XHTML conocida como sintaxis XHTML5 que deberá ser servida como XML (XHTML).</p>
+                <p>Esta es la primera vez que HTML y XHTML se han desarrollado en paralelo. El estándar incluye novedades significativas como funciones para incrustar audio, video, gráficos, almacenamiento de datos en el lado del cliente y contenido interactivo sin necesidad de plugins.</p>
+            </div>
+        </details>
+       
+        <details>
+            <summary>¿Cuáles son las principales características de CSS3?</summary>
+            <div class="acordeon-contenido">
+                <p>CSS3 introduce numerosas características nuevas que permiten crear diseños más sofisticados. Algunas de las más destacadas incluyen:</p>
+                <ul>
+                    <li>Bordes redondeados (border-radius)</li>
+                    <li>Sombras para cajas y texto (box-shadow, text-shadow)</li>
+                    <li>Gradientes de color</li>
+                    <li>Animaciones y transiciones</li>
+                    <li>Transformaciones 2D y 3D</li>
+                    <li>Consultas de medios para diseño responsivo</li>
+                    <li>Flexbox y Grid para layouts avanzados</li>
+                </ul>
+            </div>
+        </details>
+       
+        <details>
+            <summary>¿Qué ventajas ofrecen las etiquetas semánticas de HTML5?</summary>
+            <div class="acordeon-contenido">
+                <p>Las etiquetas semánticas de HTML5 como &lt;header&gt;, &lt;footer&gt;, &lt;article&gt;, &lt;section&gt;, &lt;nav&gt;, &lt;aside&gt; y &lt;main&gt; ofrecen varias ventajas:</p>
+                <ol>
+                    <li>Mejor estructura y organización del código</li>
+                    <li>Mayor accesibilidad para lectores de pantalla</li>
+                    <li>Mejor posicionamiento SEO al ayudar a los motores de búsqueda a entender la estructura del contenido</li>
+                    <li>Código más legible y mantenible</li>
+                    <li>Facilita el estilo con CSS al tener elementos con significado claro</li>
+                </ol>
+            </div>
+        </details>
+       
+        <details>
+            <summary>¿Cómo funciona el modelo de caja en CSS?</summary>
+            <div class="acordeon-contenido">
+                <p>El modelo de caja en CSS es fundamental para entender cómo se representan los elementos en una página web. Cada elemento es considerado como una caja rectangular que consta de:</p>
+                <ul>
+                    <li><strong>Contenido (content):</strong> El área donde aparece el contenido (texto, imágenes, etc.)</li>
+                    <li><strong>Relleno (padding):</strong> Espacio transparente alrededor del contenido</li>
+                    <li><strong>Borde (border):</strong> Línea que rodea el padding y el contenido</li>
+                    <li><strong>Margen (margin):</strong> Espacio transparente fuera del borde que separa el elemento de otros</li>
+                </ul>
+                <p>El tamaño total de un elemento se calcula sumando el ancho/alto del contenido + padding + borde. Los márgenes no se cuentan para el tamaño total pero afectan el posicionamiento respecto a otros elementos.</p>
+            </div>
+        </details>
+    </section>
+</body>
+</html>

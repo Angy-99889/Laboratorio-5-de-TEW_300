@@ -1,0 +1,14 @@
+.lista-iconos {
+    list-style-type: none;
+    padding: 0;
+}
+.lista-iconos li {
+    padding: 10px 0 10px 30px;
+    position: relative;
+}
+.lista-iconos li i {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    color: #4CAF50;
+}

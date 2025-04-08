@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabla con efecto de carga (skeleton)</title>
+    <link rel="stylesheet" href="estilos_20.css">
+    <script>
+        // Simular carga de datos después de 3 segundos
+        setTimeout(() => {
+            document.body.classList.add('loaded');
+        }, 3000);
+    </script>
+</head>
+<body>
+    <table class="skeleton-table">
+        <tr>
+            <th>Usuario</th>
+            <th>Email</th>
+            <th>Rol</th>
+            <th>Estado</th>
+        </tr>
+        <tr>
+            <td>
+                <div class="skeleton skeleton-text"></div>
+                <div class="loaded-content">Juan Pérez</div>
+            </td>
+            <td>
+                <div class="skeleton skeleton-text"></div>
+                <div class="loaded-content">juan@example.com</div>
+            </td>
+            <td>
+                <div class="skeleton skeleton-text-sm"></div>
+                <div class="loaded-content">Administrador</div>
+            </td>
+            <td>
+                <div class="skeleton skeleton-text-sm"></div>
+                <div class="loaded-content">Activo</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="skeleton skeleton-text"></div>
+                <div class="loaded-content">María Gómez</div>
+            </td>
+            <td>
+                <div class="skeleton skeleton-text"></div>
+                <div class="loaded-content">maria@example.com</div>
+            </td>
+            <td>
+                <div class="skeleton skeleton-text-sm"></div>
+                <div class="loaded-content">Editor</div>
+            </td>
+            <td>
+                <div class="skeleton skeleton-text-sm"></div>
+                <div class="loaded-content">Activo</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="skeleton skeleton-text"></div>
+                <div class="loaded-content">Carlos Ruiz</div>
+            </td>
+            <td>
+                <div class="skeleton skeleton-text"></div>
+                <div class="loaded-content">carlos@example.com</div>
+            </td>
+            <td>
+                <div class="skeleton skeleton-text-sm"></div>
+                <div class="loaded-content">Usuario</div>
+            </td>
+            <td>
+                <div class="skeleton skeleton-text-sm"></div>
+                <div class="loaded-content">Inactivo</div>
+            </td>
+        </tr>
+    </table>
+    <div class="loading-text">Cargando datos...</div>
+</body>
+</html>

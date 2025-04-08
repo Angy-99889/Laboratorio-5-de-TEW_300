@@ -1,0 +1,11 @@
+.lista-columnas {.lista-columnas {     column-count: 3;
+    column-gap: 30px;
+    list-style-type: none;
+    padding: 0;
+}
+.lista-columnas li {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 10px;
+    break-inside: avoid;
+}}

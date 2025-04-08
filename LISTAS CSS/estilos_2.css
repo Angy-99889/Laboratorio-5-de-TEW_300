@@ -1,0 +1,14 @@
+.lista-horizontal {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    background-color: #f0f0f0;
+}
+.lista-horizontal li {
+    padding: 10px 20px;
+    border-right: 1px solid #ccc;
+}
+.lista-horizontal li:last-child {
+    border-right: none;
+}

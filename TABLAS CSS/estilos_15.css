@@ -1,0 +1,104 @@
+body {
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.filter-controls {
+    margin: 20px 0;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+.filter-btn {
+    padding: 8px 16px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: #007bff;
+}
+
+
+.filter-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.filter-table th {
+    background-color: #343a40;
+    color: white;
+    padding: 15px;
+    text-align: left;
+}
+
+
+.filter-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+.filter-table tr {
+    background-color: white;
+}
+
+
+.filter-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+
+/* Filtros CSS */
+#all:checked~table tr {
+    display: table-row;
+}
+
+
+#electronics:checked~table tr:not(.electronics) {
+    display: none;
+}
+
+
+#clothing:checked~table tr:not(.clothing) {
+    display: none;
+}
+
+
+#books:checked~table tr:not(.books) {
+    display: none;
+}
+
+
+.stock-high {
+    color: #28a745;
+    font-weight: bold;
+}
+
+
+.stock-low {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+
+.stock-medium {
+    color: #ffc107;
+    font-weight: bold;
+}
+
+

@@ -1,0 +1,22 @@
+.lista-zoom {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+.lista-zoom li {
+    width: 100px;
+    height: 100px;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+    border-radius: 5px;
+}
+.lista-zoom li:hover {
+    transform: scale(1.2);
+    background-color: #2196F3;
+    color: white;
+}
+

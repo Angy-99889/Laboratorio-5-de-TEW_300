@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista con efecto acordeón</title>
+    <link rel="stylesheet" href="estilos_11.css">
+</head>
+<body>
+    <ul class="lista-acordeon">
+        <li>
+            <div class="lista-acordeon-titulo">Sección 1</div>
+            <div class="lista-acordeon-contenido">
+                Contenido de la sección 1. Puede incluir texto, imágenes u otros elementos.
+            </div>
+        </li>
+        <li>
+            <div class="lista-acordeon-titulo">Sección 2</div>
+            <div class="lista-acordeon-contenido">
+                Contenido de la sección 2. Más información aquí.
+            </div>
+        </li>
+    </ul>
+    <script>
+        document.querySelectorAll('.lista-acordeon-titulo').forEach(titulo => {
+            titulo.addEventListener('click', () => {
+                titulo.parentElement.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

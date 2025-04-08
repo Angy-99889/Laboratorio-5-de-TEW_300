@@ -1,0 +1,78 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f1f3f5;
+}
+
+
+form {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+
+.checkbox-container {
+    margin: 20px 0;
+}
+
+
+input[type="checkbox"] {
+    display: none;
+}
+
+
+input[type="checkbox"]+label {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+}
+
+
+input[type="checkbox"]+label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    border: 2px solid #007BFF;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+
+input[type="checkbox"]:checked+label:before {
+    background: #007BFF;
+    animation: bounce 0.5s;
+}
+
+
+input[type="checkbox"]:checked+label:after {
+    content: "✓";
+    position: absolute;
+    left: 5px;
+    top: 0;
+    color: white;
+    font-size: 18px;
+}
+
+
+@keyframes bounce {
+
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+
+    50% {
+        transform: scale(1.2);
+    }
+}

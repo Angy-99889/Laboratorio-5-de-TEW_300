@@ -1,0 +1,45 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    perspective: 1000px;
+}
+
+
+form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+
+form:hover {
+    transform: rotateY(10deg);
+}
+
+
+input,
+button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+
+button {
+    background: #764ba2;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+

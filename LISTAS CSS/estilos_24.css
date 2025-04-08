@@ -1,0 +1,36 @@
+.lista-onda-hover {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+.lista-onda-hover li {
+    width: 50px;
+    height: 50px;
+    background-color: #2196F3;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.lista-onda-hover li::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(circle, rgba(255,255,255,0.8) 10%, transparent 10.01%);
+    transform: scale(10,10);
+    opacity: 0;
+    transition: transform 0.5s, opacity 1s;
+}
+.lista-onda-hover li:hover::after {
+    transform: scale(0,0);
+    opacity: 0.3;
+    transition: 0s;
+}

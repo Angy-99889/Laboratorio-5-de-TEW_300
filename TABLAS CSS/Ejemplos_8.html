@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabla con celdas combinadas</title>
+    <link rel="stylesheet" href="estilos_8.css">
+</head>
+<body>
+    <table>
+        <caption>Horario de Clases</caption>
+        <tr>
+            <th>Hora</th>
+            <th>Lunes</th>
+            <th>Martes</th>
+            <th>Miércoles</th>
+            <th>Jueves</th>
+            <th>Viernes</th>
+        </tr>
+        <tr>
+            <td>8:00 - 9:00</td>
+            <td rowspan="2">Matemáticas</td>
+            <td>Historia</td>
+            <td rowspan="2">Ciencias</td>
+            <td>Educación Física</td>
+            <td>Arte</td>
+        </tr>
+        <tr>
+            <td>9:00 - 10:00</td>
+            <td>Lenguaje</td>
+            <td>Música</td>
+            <td>Informática</td>
+        </tr>
+        <tr>
+            <td>10:00 - 11:00</td>
+            <td colspan="5">RECREO</td>
+        </tr>
+        <tr>
+            <td>11:00 - 12:00</td>
+            <td>Inglés</td>
+            <td rowspan="2">Geografía</td>
+            <td>Filosofía</td>
+            <td rowspan="2">Química</td>
+            <td>Taller</td>
+        </tr>
+        <tr>
+            <td>12:00 - 13:00</td>
+            <td>Biología</td>
+            <td>Literatura</td>
+            <td>Taller</td>
+        </tr>
+    </table>
+</body>
+</html>

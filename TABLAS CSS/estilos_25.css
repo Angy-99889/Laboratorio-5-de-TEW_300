@@ -1,0 +1,129 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+
+.sequential-table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.5s forwards 0.3s;
+}
+
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.sequential-table th {
+    background-color: #495057;
+    color: white;
+    padding: 15px;
+    text-align: left;
+}
+
+
+.sequential-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: white;
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+
+.sequential-table tr:nth-child(1) td {
+    animation: slideIn 0.4s forwards 0.5s;
+}
+
+
+.sequential-table tr:nth-child(2) td {
+    animation: slideIn 0.4s forwards 0.7s;
+}
+
+
+.sequential-table tr:nth-child(3) td {
+    animation: slideIn 0.4s forwards 0.9s;
+}
+
+
+.sequential-table tr:nth-child(4) td {
+    animation: slideIn 0.4s forwards 1.1s;
+}
+
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.sequential-table tr {
+    position: relative;
+}
+
+
+.sequential-table tr::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #6c757d;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+
+.sequential-table tr:hover::after {
+    transform: scaleX(1);
+}
+
+
+.sequential-table tr:hover td {
+    color: white;
+}
+
+
+.rating {
+    display: inline-flex;
+    gap: 3px;
+}
+
+
+.star {
+    color: #e9ecef;
+    font-size: 18px;
+    transition: all 0.3s;
+}
+
+
+.sequential-table tr:hover .star {
+    color: #ffc107;
+}
+
+
+.star.filled {
+    color: #ffc107;
+}

@@ -1,0 +1,22 @@
+.lista-subrayado {
+    list-style-type: none;
+    padding: 0;
+    width: 200px;
+}
+.lista-subrayado li {
+    padding: 10px 0;
+    position: relative;
+}
+.lista-subrayado li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #2196F3;
+    transition: width 0.3s;
+}
+.lista-subrayado li:hover::after {
+    width: 100%;
+}

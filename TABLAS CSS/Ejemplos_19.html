@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabla con efecto acordeón para filas</title>
+    <link rel="stylesheet" href="estilos_19.css">
+</head>
+<body>
+    <table class="accordion-table">
+        <tbody>
+            <input type="checkbox" id="row1" hidden>
+            <tr class="main-row">
+                <td><span class="toggle-icon">▶</span> Proyecto Alpha</td>
+                <td>Juan Pérez</td>
+                <td>15/06/2023</td>
+                <td>En progreso</td>
+            </tr>
+            <tr class="details-row">
+                <td colspan="4">
+                    <h4>Detalles del Proyecto Alpha</h4>
+                    <p>Este proyecto consiste en el desarrollo de una plataforma web para gestión de contenidos. Incluye módulos de usuarios, permisos y publicación de artículos.</p>
+                    <p><strong>Equipo:</strong> 3 desarrolladores, 1 diseñador</p>
+                    <p><strong>Presupuesto:</strong> $25,000</p>
+                </td>
+            </tr>
+           
+            <input type="checkbox" id="row2" hidden>
+            <tr class="main-row">
+                <td><span class="toggle-icon">▶</span> Proyecto Beta</td>
+                <td>María Gómez</td>
+                <td>01/07/2023</td>
+                <td>Planificación</td>
+            </tr>
+            <tr class="details-row">
+                <td colspan="4">
+                    <h4>Detalles del Proyecto Beta</h4>
+                    <p>Aplicación móvil para seguimiento de actividad física. Integración con wearables y redes sociales.</p>
+                    <p><strong>Equipo:</strong> 2 desarrolladores móviles, 1 backend</p>
+                    <p><strong>Presupuesto:</strong> $18,000</p>
+                </td>
+            </tr>
+           
+            <input type="checkbox" id="row3" hidden>
+            <tr class="main-row">
+                <td><span class="toggle-icon">▶</span> Proyecto Gamma</td>
+                <td>Carlos Ruiz</td>
+                <td>10/05/2023</td>
+                <td>Completado</td>
+            </tr>
+            <tr class="details-row">
+                <td colspan="4">
+                    <h4>Detalles del Proyecto Gamma</h4>
+                    <p>Sistema de inventario para retail con control de stock, ventas y reportes analíticos.</p>
+                    <p><strong>Equipo:</strong> 4 desarrolladores, 1 QA</p>
+                    <p><strong>Presupuesto:</strong> $32,000</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+

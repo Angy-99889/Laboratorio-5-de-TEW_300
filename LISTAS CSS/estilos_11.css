@@ -1,0 +1,26 @@
+.lista-acordeon {
+    list-style-type: none;
+    padding: 0;
+    width: 300px;
+}
+.lista-acordeon li {
+    margin-bottom: 5px;
+}
+.lista-acordeon-titulo {
+    background-color: #2196F3;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.lista-acordeon-contenido {
+    background-color: #f9f9f9;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+.lista-acordeon li.active .lista-acordeon-contenido {
+    padding: 10px 15px;
+    max-height: 200px;
+}

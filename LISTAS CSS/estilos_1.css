@@ -1,0 +1,8 @@
+.lista-personalizada {
+    list-style-type: none;
+}
+.lista-personalizada li::before {
+    content: "?";
+    color: #5c2215;
+    margin-right: 10px;
+}

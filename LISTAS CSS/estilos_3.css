@@ -1,0 +1,4 @@
+.lista-imagenes {
+    list-style-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="%23ff5722"><circle cx="12" cy="12" r="8"/></svg>');
+    padding-left: 25px;
+}

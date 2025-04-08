@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 25 - Lightbox CSS</title>
+    <link rel="stylesheet" href="estilos_25.css">
+
+</head>
+<body>
+    <h1>Galería con Lightbox CSS</h1>
+   
+    <section class="gallery">
+        <label for="lightbox-toggle" class="gallery-item">
+            <img src="http://picsum.photos/600/600/" alt="Naturaleza">
+        </label>
+       
+        <label for="lightbox-toggle" class="gallery-item">
+            <img src="http://picsum.photos/600/600/" alt="Ciudad">
+        </label>
+       
+        <label for="lightbox-toggle" class="gallery-item">
+            <img src="http://picsum.photos/600/600/" alt="Montaña">
+        </label>
+       
+        <label for="lightbox-toggle" class="gallery-item">
+            <img src="http://picsum.photos/600/600/" alt="Playa">
+        </label>
+       
+        <label for="lightbox-toggle" class="gallery-item">
+            <img src="http://picsum.photos/600/600/" alt="Bosque">
+        </label>
+       
+        <label for="lightbox-toggle" class="gallery-item">
+            <img src="http://picsum.photos/600/600/" alt="Cascada">
+        </label>
+    </section>
+   
+    <input type="checkbox" id="lightbox-toggle" class="lightbox-toggle">
+   
+    <div class="lightbox">
+        <div class="lightbox-content">
+            <label for="lightbox-toggle" class="lightbox-close">×</label>
+            <img src="https://source.unsplash.com/random/600x600?nature" alt="Imagen ampliada">
+            <p class="lightbox-caption">Descripción de la imagen</p>
+            <div class="lightbox-nav">
+                <button>❮</button>
+                <button>❯</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

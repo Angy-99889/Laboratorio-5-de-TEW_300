@@ -1,0 +1,112 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f7fa;
+    padding: 30px;
+}
+
+
+.validation-table {
+    border-collapse: collapse;
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+.validation-table th {
+    background-color: #495057;
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-weight: 500;
+}
+
+
+.validation-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+
+.validation-table tr {
+    background-color: white;
+}
+
+
+.validation-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+
+.data-cell {
+    position: relative;
+    padding-left: 30px;
+}
+
+
+.data-cell:before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+
+.valid:before {
+    background-color: #28a745;
+}
+
+
+.invalid:before {
+    background-color: #dc3545;
+}
+
+
+.warning:before {
+    background-color: #ffc107;
+}
+
+
+.neutral:before {
+    background-color: #6c757d;
+}
+
+
+.progress-bar {
+    height: 8px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+
+.progress-value {
+    height: 100%;
+    border-radius: 4px;
+}
+
+
+.progress-high {
+    background-color: #28a745;
+    width: 85%;
+}
+
+
+.progress-medium {
+    background-color: #ffc107;
+    width: 60%;
+}
+
+
+.progress-low {
+    background-color: #dc3545;
+    width: 30%;
+}
+
+

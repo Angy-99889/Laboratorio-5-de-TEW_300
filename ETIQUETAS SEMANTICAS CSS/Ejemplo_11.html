@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html< lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 11 - Barras de progreso</title>
+    <link rel="stylesheet" href="estilos_11.css">
+
+</head>
+<body>
+    <h1>Mis Habilidades Técnicas</h1>
+   
+    <section>
+        <article class="skill-container html">
+            <div class="skill-info">
+                <span class="skill-name">HTML5</span>
+                <span class="skill-percent">90%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </article>
+       
+        <article class="skill-container css">
+            <div class="skill-info">
+                <span class="skill-name">CSS3</span>
+                <span class="skill-percent">85%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </article>
+       
+        <article class="skill-container js">
+            <div class="skill-info">
+                <span class="skill-name">JavaScript</span>
+                <span class="skill-percent">75%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </article>
+       
+        <article class="skill-container react">
+            <div class="skill-info">
+                <span class="skill-name">React</span>
+                <span class="skill-percent">70%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </article>
+       
+        <article class="skill-container node">
+            <div class="skill-info">
+                <span class="skill-name">Node.js</span>
+                <span class="skill-percent">65%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </article>
+    </section>
+   
+    <script>
+        // Pequeño script para reiniciar las animaciones al cargar la página
+        document.addEventListener('DOMContentLoaded', function() {
+            const progressBars = document.querySelectorAll('.progress');
+            progressBars.forEach(bar => {
+                bar.style.width = '0';
+                setTimeout(() => {
+                    bar.style.width = bar.parentElement.parentElement.classList.contains('html') ? '90%' :
+                                      bar.parentElement.parentElement.classList.contains('css') ? '85%' :
+                                      bar.parentElement.parentElement.classList.contains('js') ? '75%' :
+                                      bar.parentElement.parentElement.classList.contains('react') ? '70%' : '65%';
+                }, 100);
+            });
+        });
+    </script>
+</body>
+</html>

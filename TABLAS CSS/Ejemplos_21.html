@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabla con pestañas integradas</title>
+    <link rel="stylesheet" href="estilos_21.css">
+</head>
+<body>
+    <div class="tabs-container">
+        <div class="tabs-header">
+            <button class="tab-btn active" data-tab="tab1">Pedidos</button>
+            <button class="tab-btn" data-tab="tab2">Clientes</button>
+            <button class="tab-btn" data-tab="tab3">Productos</button>
+        </div>
+       
+        <div class="tab-content active" id="tab1">
+            <table class="tab-table">
+                <tr>
+                    <th>ID Pedido</th>
+                    <th>Cliente</th>
+                    <th>Fecha</th>
+                    <th>Estado</th>
+                    <th>Total</th>
+                </tr>
+                <tr>
+                    <td>#1001</td>
+                    <td>Juan Pérez</td>
+                    <td>15/06/2023</td>
+                    <td><span class="badge badge-success">Completado</span></td>
+                    <td>$120.50</td>
+                </tr>
+                <tr>
+                    <td>#1002</td>
+                    <td>María Gómez</td>
+                    <td>16/06/2023</td>
+                    <td><span class="badge badge-primary">En proceso</span></td>
+                    <td>$89.99</td>
+                </tr>
+            </table>
+        </div>
+       
+        <div class="tab-content" id="tab2">
+            <table class="tab-table">
+                <tr>
+                    <th>ID Cliente</th>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Registro</th>
+                    <th>Estado</th>
+                </tr>
+                <tr>
+                    <td>#2001</td>
+                    <td>Juan Pérez</td>
+                    <td>juan@example.com</td>
+                    <td>10/05/2023</td>
+                    <td><span class="badge badge-success">Activo</span></td>
+                </tr>
+                <tr>
+                    <td>#2002</td>
+                    <td>María Gómez</td>
+                    <td>maria@example.com</td>
+                    <td>12/06/2023</td>
+                    <td><span class="badge badge-warning">Inactivo</span></td>
+                </tr>
+            </table>
+        </div>
+       
+        <div class="tab-content" id="tab3">
+            <table class="tab-table">
+                <tr>
+                    <th>ID Producto</th>
+                    <th>Nombre</th>
+                    <th>Categoría</th>
+                    <th>Precio</th>
+                    <th>Stock</th>
+                </tr>
+                <tr>
+                    <td>#3001</td>
+                    <td>Smartphone X</td>
+                    <td>Electrónicos</td>
+                    <td>$699.00</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>#3002</td>
+                    <td>Laptop Pro</td>
+                    <td>Electrónicos</td>
+                    <td>$1299.00</td>
+                    <td>8</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+   
+    <script>
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remover clase active de todos los botones y contenidos
+                document.querySelectorAll('.tab-btn, .tab-content').forEach(el => {
+                    el.classList.remove('active');
+                });
+               
+                // Agregar clase active al botón clickeado
+                btn.classList.add('active');
+               
+                // Mostrar el contenido correspondiente
+                const tabId = btn.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

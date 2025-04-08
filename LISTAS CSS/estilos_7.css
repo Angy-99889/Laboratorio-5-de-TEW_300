@@ -1,0 +1,28 @@
+.lista-bordes {
+    list-style-type: none;
+    padding: 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.lista-bordes li {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+.lista-bordes li:last-child {
+    border-bottom: none;
+}
+.lista-bordes li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 5px;
+    background-color: #2196F3;
+    transition: width 0.3s;
+}
+.lista-bordes li:hover::after {
+    width: 10px;
+}

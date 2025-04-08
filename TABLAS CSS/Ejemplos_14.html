@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabla con validación visual de datos</title>
+    <link rel="stylesheet" href="estilos_14.css">
+</head>
+<body>
+    <table class="validation-table">
+        <tr>
+            <th>Campo</th>
+            <th>Valor</th>
+            <th>Estado</th>
+            <th>Completitud</th>
+        </tr>
+        <tr>
+            <td>Nombre</td>
+            <td class="data-cell valid">Juan Pérez</td>
+            <td>Válido</td>
+            <td>
+                <div class="progress-bar">
+                    <div class="progress-value progress-high"></div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td class="data-cell invalid">juan.example.com</td>
+            <td>Inválido (falta @)</td>
+            <td>
+                <div class="progress-bar">
+                    <div class="progress-value progress-low"></div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Teléfono</td>
+            <td class="data-cell warning">123456</td>
+            <td>Incompleto</td>
+            <td>
+                <div class="progress-bar">
+                    <div class="progress-value progress-medium"></div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Dirección</td>
+            <td class="data-cell neutral">No proporcionada</td>
+            <td>Neutral</td>
+            <td>
+                <div class="progress-bar">
+                    <div class="progress-value progress-low" style="width: 10%;"></div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

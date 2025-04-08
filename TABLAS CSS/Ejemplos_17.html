@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabla con tooltips en celdas</title>
+    <link rel="stylesheet" href="estilos_17.css">
+</head>
+<body>
+    <table class="tooltip-table">
+        <tr>
+            <th>Tarea</th>
+            <th>Estado</th>
+            <th>Prioridad</th>
+            <th>Detalles</th>
+        </tr>
+        <tr>
+            <td>Revisar código</td>
+            <td>En progreso</td>
+            <td class="priority-high">Alta</td>
+            <td><span class="tooltip" data-tooltip="Revisar módulo de autenticación">Ver más</span></td>
+        </tr>
+        <tr>
+            <td>Diseñar UI</td>
+            <td>Pendiente</td>
+            <td class="priority-medium">Media</td>
+            <td><span class="tooltip" data-tooltip="Pantallas de configuración">Ver más</span></td>
+        </tr>
+        <tr>
+            <td>Documentar API</td>
+            <td>Completado</td>
+            <td class="priority-low">Baja</td>
+            <td><span class="tooltip" data-tooltip="Endpoints de usuarios">Ver más</span></td>
+        </tr>
+    </table>
+</body>
+</html>
+

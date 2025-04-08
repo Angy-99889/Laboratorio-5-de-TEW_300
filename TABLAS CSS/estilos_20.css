@@ -1,0 +1,121 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    padding: 30px;
+}
+
+
+.skeleton-table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+.skeleton-table th {
+    background-color: #495057;
+    color: white;
+    padding: 15px;
+    text-align: left;
+}
+
+
+.skeleton-table td {
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+
+.skeleton-table tr {
+    background-color: white;
+}
+
+
+.skeleton {
+    animation: skeleton-loading 1.5s infinite ease-in-out;
+    background-color: #e9ecef;
+    background-image: linear-gradient(90deg,
+            rgba(255, 255, 255, 0),
+            rgba(255, 255, 255, 0.5),
+            rgba(255, 255, 255, 0));
+    background-size: 200px 100%;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    display: inline-block;
+    line-height: 1;
+    width: 100%;
+}
+
+
+@keyframes skeleton-loading {
+    0% {
+        background-position: -200px 0;
+    }
+
+
+    100% {
+        background-position: calc(200px + 100%) 0;
+    }
+}
+
+
+.skeleton-text {
+    height: 12px;
+    width: 80%;
+}
+
+
+.skeleton-text-sm {
+    height: 12px;
+    width: 50%;
+}
+
+
+.skeleton-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+
+.loading-text {
+    text-align: center;
+    color: #6c757d;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+
+/* Simular carga de datos */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+.loaded-content {
+    animation: fadeIn 0.5s forwards;
+    display: none;
+}
+
+
+/* Simular que los datos se han cargado después de 3 segundos */
+body.loaded .skeleton {
+    display: none;
+}
+
+
+body.loaded .loaded-content {
+    display: block;
+}
+
+

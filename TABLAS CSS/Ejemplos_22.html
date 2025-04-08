@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabla con búsqueda y paginación CSS</title>
+    <link rel="stylesheet" href="estilos_22.css">
+</head>
+<body>
+    <div class="search-table-container">
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Buscar...">
+            <button onclick="searchTable()">Buscar</button>
+        </div>
+       
+        <table class="search-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Rol</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <tr>
+                    <td>1</td>
+                    <td>Juan Pérez</td>
+                    <td>juan@example.com</td>
+                    <td>Administrador</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>María Gómez</td>
+                    <td>maria@example.com</td>
+                    <td>Editor</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Carlos Ruiz</td>
+                    <td>carlos@example.com</td>
+                    <td>Usuario</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Ana Martínez</td>
+                    <td>ana@example.com</td>
+                    <td>Editor</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Pedro Sánchez</td>
+                    <td>pedro@example.com</td>
+                    <td>Usuario</td>
+                </tr>
+            </tbody>
+        </table>
+       
+        <div class="no-results" id="noResults">
+            No se encontraron resultados
+        </div>
+       
+        <div class="pagination" id="pagination">
+            <button class="active">1</button>
+            <button>2</button>
+            <button>3</button>
+        </div>
+    </div>
+   
+    <script>
+        function searchTable() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toUpperCase();
+            const table = document.getElementById('tableBody');
+            const rows = table.getElementsByTagName('tr');
+            let found = false;
+           
+            for (let i = 0; i < rows.length; i++) {
+                const cells = rows[i].getElementsByTagName('td');
+                let rowContainsText = false;
+               
+                for (let j = 0; j < cells.length; j++) {
+                    const cellText = cells[j].textContent || cells[j].innerText;
+                   
+                    if (cellText.toUpperCase().indexOf(filter) > -1) {
+                        rowContainsText = true;
+                        break;
+                    }
+                }
+               
+                if (rowContainsText) {
+                    rows[i].classList.remove('hidden');
+                    found = true;
+                } else {
+                    rows[i].classList.add('hidden');
+                }
+            }
+           
+            document.getElementById('noResults').style.display = found ? 'none' : 'block';
+        }
+       
+        // Simulación de paginación
+        document.querySelectorAll('.pagination button').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.pagination button').forEach(b => {
+                    b.classList.remove('active');
+                });
+                btn.classList.add('active');
+                // Aquí normalmente cargarías los datos de la página correspondiente
+            });
+        });
+    </script>
+</body>
+</html>
+
+

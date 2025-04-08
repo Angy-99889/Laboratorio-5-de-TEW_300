@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabla con filtros CSS</title>
+    <link rel="stylesheet" href="estilos_15.css">
+</head>
+<body>
+    <h2>Filtrar Productos</h2>
+    <div class="filter-controls">
+        <input type="radio" id="all" name="filter" checked hidden>
+        <label for="all" class="filter-btn active">Todos</label>
+       
+        <input type="radio" id="electronics" name="filter" hidden>
+        <label for="electronics" class="filter-btn">Electrónicos</label>
+       
+        <input type="radio" id="clothing" name="filter" hidden>
+        <label for="clothing" class="filter-btn">Ropa</label>
+       
+        <input type="radio" id="books" name="filter" hidden>
+        <label for="books" class="filter-btn">Libros</label>
+    </div>
+   
+    <table class="filter-table">
+        <tr>
+            <th>Producto</th>
+            <th>Categoría</th>
+            <th>Precio</th>
+            <th>Stock</th>
+        </tr>
+        <tr class="electronics">
+            <td>Smartphone X</td>
+            <td>Electrónicos</td>
+            <td>$699</td>
+            <td class="stock-high">Disponible</td>
+        </tr>
+        <tr class="clothing">
+            <td>Camiseta</td>
+            <td>Ropa</td>
+            <td>$25</td>
+            <td class="stock-medium">Últimas unidades</td>
+        </tr>
+        <tr class="electronics">
+            <td>Laptop Pro</td>
+            <td>Electrónicos</td>
+            <td>$1299</td>
+            <td class="stock-low">Agotándose</td>
+        </tr>
+        <tr class="books">
+            <td>El Principito</td>
+            <td>Libros</td>
+            <td>$15</td>
+            <td class="stock-high">Disponible</td>
+        </tr>
+        <tr class="clothing">
+            <td>Jeans</td>
+            <td>Ropa</td>
+            <td>$45</td>
+            <td class="stock-high">Disponible</td>
+        </tr>
+    </table>
+</body>
+</html>
+

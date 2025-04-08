@@ -1,0 +1,120 @@
+body {
+    font-family: 'Courier New', monospace;
+    background: #2c3e50;
+    color: #ecf0f1;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+}
+
+
+.typing-container {
+    max-width: 800px;
+}
+
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    position: relative;
+    width: max-content;
+}
+
+
+h1::before,
+h1::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+
+h1::before {
+    background: #2c3e50;
+    animation: typewriter 3s steps(24) forwards;
+}
+
+
+h1::after {
+    width: 0.1em;
+    background: #ecf0f1;
+    animation:
+        typewriter 3s steps(24) forwards,
+        blink 750ms steps(24) infinite;
+}
+
+
+.subtitle {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease 3s forwards;
+    color: #bdc3c7;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+
+@keyframes typewriter {
+    to {
+        left: 100%;
+    }
+}
+
+
+@keyframes blink {
+    to {
+        background: transparent;
+    }
+}
+
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.buttons {
+    margin-top: 30px;
+    opacity: 0;
+    animation: fadeIn 1s ease 3.5s forwards;
+    display: flex;
+    gap: 15px;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+
+.btn:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid #3498db;
+    color: #3498db;
+}
+
+
+.btn-outline:hover {
+    background: rgba(52, 152, 219, 0.1);
+}

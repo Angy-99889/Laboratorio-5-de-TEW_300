@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 18 - Menú Hamburguesa</title>
+    <link rel="stylesheet" href="estilos_18.css">
+
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Mi Sitio</a>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Portafolio</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="overlay"></div>
+    </header>
+   
+    <main>
+        <h1>Menú Hamburguesa con CSS Puro</h1>
+        <p>Este ejemplo muestra cómo crear un menú hamburguesa completamente funcional utilizando solo HTML y CSS, sin necesidad de JavaScript.</p>
+        <p>El menú se activa al hacer clic en el icono de hamburguesa y se desliza desde el lado derecho de la pantalla.</p>
+        <p>En dispositivos más grandes (ancho mínimo de 768px), el menú se muestra normalmente en la barra de navegación.</p>
+    </main>
+   
+    <script>
+        // Pequeño script para alternar las clases active
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('nav').classList.toggle('active');
+            document.querySelector('.overlay').classList.toggle('active');
+        });
+       
+        document.querySelector('.overlay').addEventListener('click', function() {
+            this.classList.remove('active');
+            document.querySelector('.menu-toggle').classList.remove('active');
+            document.querySelector('nav').classList.remove('active');
+        });
+    </script>
+</body>
+</html>
